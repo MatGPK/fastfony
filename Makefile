@@ -32,12 +32,10 @@ setup_tests: ## Setup test environment
 start: ## Start the development server
 	$(MAKE) vendor
 	$(MAKE) node_modules
-	npm run build
 	chmod -R 777 public/uploads/
 	bin/console app:install --env=dev
 	bin/console doctrine:schema:update --force --env=dev
 	bin/console assets:install
-	npm run dev
 	symfony proxy:start
 	symfony server:start -d
 	rm -rf var/cache/*

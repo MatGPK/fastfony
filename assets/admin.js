@@ -1,4 +1,7 @@
 import './bootstrap.js';
-import './js/richTextEditor';
+import './js/richTextEditor.js';
 
 import './styles/admin.css';
+import './styles/admin/formkit.css';
+
+

@@ -1,12 +1,19 @@
-@import 'tailwindcss' source(none);
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+@plugin "../vendor/daisyui/daisyui.index.js"{
+    themes: all;
+}
+
 @source "../vue";
 @source "../../templates/";
 @source inline("alert-{danger,success,error,warning,info}");
 @source inline("bg-red-600 bg-white/10 backdrop-blur-sm");
 @plugin "@tailwindcss/typography";
 
-@plugin "daisyui" {
-    themes: all;
+@theme {
+    --font-sans: 'Outfit', 'sans-serif';
+    --font-display--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    --font-display--font-variation-settings: 'opsz' 32;
 }
 
 @custom-variant dark (&:where(
@@ -25,3 +32,4 @@
     [data-theme=sunset], [data-theme=sunset] *,
     [data-theme=abyss], [data-theme=abyss] *,
 ));
+

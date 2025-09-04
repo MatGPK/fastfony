@@ -5,6 +5,8 @@ import { onMounted, ref } from 'vue';
 import { useToast } from 'vue-toastification';
 const toast = useToast();
 
+console.log('test');
+
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 

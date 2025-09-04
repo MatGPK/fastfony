@@ -13,11 +13,11 @@
         {% endblock %}
 
         {% block stylesheets %}
-            {{ encore_entry_link_tags('front') }}
+            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('front') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
             {% if feature_enabled('theme_chooser') %}
                 <script type="text/javascript">document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') ?? 'light');</script>
             {% endif %}

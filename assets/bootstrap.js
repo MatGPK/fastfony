@@ -21,12 +21,6 @@ document.querySelectorAll('input[data-choose-theme]').forEach((input) => {
   });
 });
 
-/* Symfony ux-vue */
-import { registerVueControllerComponents } from '@symfony/ux-vue';
-registerVueControllerComponents(
-  require.context('./vue/controllers', true, /\.vue$/),
-);
-
 /* Internationalisation */
 import { createI18n } from 'vue-i18n';
 import en from './locales/app.en.json';
